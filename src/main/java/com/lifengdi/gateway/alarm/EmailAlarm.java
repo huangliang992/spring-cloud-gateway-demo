@@ -4,7 +4,7 @@ import com.lifengdi.gateway.utils.EmailUtils;
 import com.lifengdi.gateway.utils.EnvironmentUtils;
 import com.lifengdi.gateway.utils.FormatUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.exception.ExceptionUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

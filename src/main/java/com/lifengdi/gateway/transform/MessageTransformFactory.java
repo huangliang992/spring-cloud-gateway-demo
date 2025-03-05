@@ -3,7 +3,7 @@ package com.lifengdi.gateway.transform;
 import com.lifengdi.gateway.enums.TransformContentTypeEnum;
 import com.lifengdi.gateway.properties.MessageTransformProperties;
 import com.lifengdi.gateway.properties.entity.MessageTransformUrl;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 

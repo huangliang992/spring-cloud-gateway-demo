@@ -15,22 +15,23 @@ spring:
           predicates:
             - Path=/jar/**
           filters:
-            # 熔断配置
-            - name: Hystrix
-              args:
-                name: default
-                fallbackUri: forward:/fallback
+            - StripPrefix=1
+        #            # 熔断配置
+#            - name: Hystrix
+#              args:
+#                name: default
+#                fallbackUri: forward:/fallback
         - id: path_route2
           # 指定域名
           uri: http://localhost:8082
           predicates:
             - Path=/war/**
-          filters:
-            # 熔断配置
-            - name: Hystrix
-              args:
-                name: hystrix1
-                fallbackUri: forward:/fallback
+#          filters:
+#            # 熔断配置
+#            - name: Hystrix
+#              args:
+#                name: hystrix1
+#                fallbackUri: forward:/fallback
   redis:
     database: 0
     host: localhost
@@ -48,18 +49,18 @@ spring:
     throw-exception-if-no-handler-found: true
 
 # 默认熔断超时时间30s
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 3000
-    hystrix1:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 1000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 3000
+#    hystrix1:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 1000
 # 报文转换配置
 trans:
   url-list:
